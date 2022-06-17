@@ -9,9 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { PrivateComponent } from './private/private.component';
+import { PublicComponent } from './public/public.component';
 
 @NgModule({
-  declarations: [AppComponent, UsersListComponent, LoginComponent],
+  declarations: [AppComponent, UsersListComponent, LoginComponent, PrivateComponent, PublicComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
