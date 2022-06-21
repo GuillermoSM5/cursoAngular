@@ -89,3 +89,8 @@
     color: #F5F5F4;
   }
   
+  .containerLog{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/forest-483207_960_720.jpg');
+  }

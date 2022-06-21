@@ -1,42 +1,52 @@
-<div class="loginContainer">
-  <div class="card">
-    <div class="card_body">
-      <h2 class="title-section__text mg-top">Bienvenido</h2>
-      <p class="title-section__text">Para continuar, por favor inicia sesión</p>
-      <form>
-        <!-- <div class="customField">
-          <label class="customField_label">Usuario</label>
-          <input
-            autocomplete="off"
-            type="text"
-            formControlName="email"
-            class="customField_input"
-          />
-        </div> -->
-        <div class="borde">
+<div class="containerLog">
+  <div class="loginContainer">
+    <div class="card">
+      <div class="card_body">
+        <h2 class="title-section__text mg-top">Bienvenido</h2>
+        <p class="title-section__text">
+          Para continuar, por favor inicia sesión
+        </p>
+        <form (ngSubmit)="sendLogin()" [formGroup]="loginForm">
+          <!-- <div class="customField">
+            <label class="customField_label">Usuario</label>
+            <input
+              autocomplete="off"
+              type="text"
+              formControlName="email"
+              class="customField_input"
+            />
+          </div> -->
+          <div class="borde">
+            <mat-form-field class="w" appearance="legacy" color="accent">
+              <mat-label>Usuario</mat-label>
+              <input formControlName="email" matInput autocomplete="off" />
+            </mat-form-field>
+          </div>
+          <!-- <div class="customField">
+            <label class="customField_label">Contraseña</label>
+            <input
+              autocomplete="off"
+              type="password"
+              formControlName="phrase"
+              class="customField_input"
+            />
+          </div> -->
           <mat-form-field class="w" appearance="legacy" color="accent">
-            <mat-label>Usuario</mat-label>
-            <input matInput autocomplete="off" />
+            <mat-label>Contraseña</mat-label>
+            <input
+              class="input"
+              formControlName="password"
+              autocomplete="off"
+              matInput
+              type="password"
+            />
           </mat-form-field>
-        </div>
-        <!-- <div class="customField">
-          <label class="customField_label">Contraseña</label>
-          <input
-            autocomplete="off"
-            type="password"
-            formControlName="phrase"
-            class="customField_input"
-          />
-        </div> -->
-        <mat-form-field class="w" appearance="legacy" color="accent">
-          <mat-label>Contraseña</mat-label>
-          <input class="input" autocomplete="off" matInput type="password" />
-        </mat-form-field>
 
-        <button type="submit" mat-raised-button class="card_button">
-          Aceptar
-        </button>
-      </form>
+          <button type="submit" mat-raised-button class="card_button">
+            Aceptar
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+}
+
+.title{
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+table {
+    width: 80%;
+    margin-bottom: 2rem;
+    
+  }
+
+  .tableContainer{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+ 
+}

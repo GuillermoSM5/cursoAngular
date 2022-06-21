@@ -1,0 +1,83 @@
+<div>
+  <h1 class="title">Registrar usuario</h1>
+  <div>
+    <form
+      (ngSubmit)="registerUser()"
+      [formGroup]="user"
+      class="container__form"
+    >
+      <div class="row mb-4">
+        <div class="col">
+          <mat-form-field appearance="outline" color="accent" class="input">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="name" autocomplete="off" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline" color="accent" class="input">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="lastName" autocomplete="off" />
+            <mat-error>Este campo es requerido</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline" color="accent" class="input">
+            <mat-label>Segundo apellido</mat-label>
+            <input
+              matInput
+              formControlName="secondLastName"
+              autocomplete="off"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col">
+          <mat-form-field appearance="outline" color="accent" class="input">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" autocomplete="off" />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="outline" color="accent" class="input">
+            <mat-label>Contraseña</mat-label>
+            <input
+              matInput
+              type="password"
+              formControlName="password"
+              autocomplete="off"
+            />
+            <mat-error>Este campo es requerido</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field
+            appearance="outline"
+            class="example-form-field"
+            color="accent"
+            class="input"
+          >
+            <mat-label>Role</mat-label>
+            <mat-select name="food" formControlName="roleId" color="accent">
+              <mat-option value="1">Admin</mat-option>
+              <mat-option value="2">Viewer</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col"></div>
+        <div class="col buttonContainer">
+          <button
+            type="submit"
+            mat-raised-button
+            [disabled]="this.user.invalid"
+          >
+            Registrar Usuario
+          </button>
+        </div>
+        <div class="col"></div>
+      </div>
+    </form>
+  </div>
+</div>

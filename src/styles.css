@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-body{
-    background-image: url('../src/assets/forest-483207_960_720.jpg');
-}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;color: #9FA09C; background-color: #3E462A;}
+/* body{
+    
+} */
+
+.container__form {
+    margin: 0px 20px !important;
+    /* // width: 100%;
+    // display: table; */
+  }
